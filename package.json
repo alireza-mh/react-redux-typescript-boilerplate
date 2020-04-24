@@ -12,6 +12,11 @@
     "todomvc"
   ],
   "main": "index.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsc --noEmit && pretty-quick --staged"
+    }
+  },
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -40,6 +45,7 @@
     "gh-pages": "^2.0.1",
     "html-loader": "^1.0.0-alpha.0",
     "html-webpack-plugin": "^4.0.0-alpha",
+    "husky": "^4.2.5",
     "mini-css-extract-plugin": "^0.5.0",
     "postcss": "^7.0.13",
     "postcss-browser-reporter": "^0.5.0",
@@ -49,6 +55,7 @@
     "postcss-reporter": "^6.0.1",
     "postcss-url": "^8.0.0",
     "prettier": "^1.15.3",
+    "pretty-quick": "^2.0.1",
     "react-hot-loader": "^4.6.3",
     "redux-devtools-extension": "^2.13.7",
     "style-loader": "^0.23.1",
